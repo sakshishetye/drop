@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %}
+{% block body %}
+<div class="container my-3">
+    <form action="/" method="POST">
+</div>
+<div class="mb-3">
+    <select name="list" id="list" accesskey="target">
+        <option value='none' selected>Choose a template</option>
+        <option value="aset.pdf">ASET</option>
+        <option value="daa.pdf">DAA</option>
+        <option value="DBS.pdf">DBS</option>
+        <option value="DCMP.pdf">DCMP</option>
+        <option value="DCS.pdf">DCS</option>
+        <option value="DHEP.pdf">DHEP</option>
+        <option value="dnap.pdf">DNAP</option>
+        <option value="DTP.pdf">DTP</option>
+        <option value="WEDNESSDAY.pdf">WEDNESDAY</option>
+    </select>
+
+    <form action="/go" method="POST"></form>
+
+
+    <input type=button value="Go" onclick="goToNewPage()" />
+
+</div>
+</form>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+{% endblock body %}

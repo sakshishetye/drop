@@ -1,0 +1,98 @@
+<!-- input.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function goToNewPage() {
+            var url = document.getElementById('list').value;
+            if (url != 'none') {
+                window.location = url;
+            }
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Example</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <style>
+        h2 {
+            background-color: rgb(186, 207, 226);
+            color: black;
+
+        }
+
+        body {
+            height: 1000px;
+            width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script>
+        var btnName = function () {
+            $.get('/do_something',
+                function (x) {
+                    $("#resBtnHere").html(x);
+                }
+            )
+        }
+        btnName()
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="header">
+
+        <h2>
+            <footer class="blockquote-footer">WELCOME..</footer>
+        </h2>
+    </div>
+    <div>
+        <!-- <form method="POST" action="/" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <button>Submit</button><br> -->
+
+        <!--
+         -->
+
+        <form class="grid" action="/result" method="POST">
+            <select name="list" id="list" accesskey="target">
+                <option value='none' selected>Choose a template</option>
+                <option value="aset.pdf">ASET</option>
+                <option value="daa.pdf">DAA</option>
+                <option value="DBS.pdf">DBS</option>
+                <option value="DCMP.pdf">DCMP</option>
+                <option value="DCS.pdf">DCS</option>
+                <option value="DHEP.pdf">DHEP</option>
+                <option value="dnap.pdf">DNAP</option>
+                <option value="DTP.pdf">DTP</option>
+                <option value="WEDNESSDAY.pdf">WEDNESDAY</option>
+            </select>
+            <input type=button value="Go" onclick="goToNewPage()" />
+
+        </form>
+
+</body>
+
+</html>

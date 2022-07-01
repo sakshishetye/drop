@@ -1,0 +1,71 @@
+<!-- input.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock title %} - Document</title>
+    <script type="text/javascript">
+        function goToNewPage() {
+            var url = document.getElementById('list').value;
+            if (url != 'none') {
+                window.location = url;
+            }
+        }
+    </script>
+
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Example</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style> -->
+    <style>
+        h2 {
+            background-color: rgb(190, 217, 226);
+            color: black;
+
+        }
+
+        body {
+            height: 1000px;
+            width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <!-- <script>
+        var btnName = function () {
+            $.get('/do_something',
+                function (x) {
+                    $("#resBtnHere").html(x);
+                }
+            )
+        }
+        btnName()
+    </script> -->
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h2><i>WELCOME..</i></h2>
+    </div>
+    {% block body %}
+
+    {% endblock body %}
+</body>
